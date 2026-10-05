@@ -1,0 +1,21 @@
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Generated keys (never upload, even encrypted)
+data/keys/*.pem
+
+# Kernel driver build output
+*.ko
+*.o
+*.mod
+*.mod.c
+*.symvers
+*.order
+.tmp_versions/
+.*.cmd
+
+# Compiled binaries
+vtpm_cli
+*_test
+!data/keys/.gitkeep

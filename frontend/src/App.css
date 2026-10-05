@@ -1,0 +1,45 @@
+:root{--bg:#0d1117;--panel:#141b26;--line:#263247;--tx:#d6dfef;--mut:#8493ad;--g:#3fb68b;--a:#e0a43a;--r:#e5534b;--b:#4c9aff}
+#root{height:100vh;font-family:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;color:var(--tx);font-size:14px}
+.app{display:grid;grid-template-columns:210px 1fr;height:100%}
+nav{background:#0a0f16;border-right:1px solid var(--line);padding:14px 10px;overflow:auto}
+nav h1{font-size:15px;margin:0 6px 14px;line-height:1.3}nav h1 small{display:block;color:var(--mut);font-weight:400}
+nav button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--mut);padding:9px 10px;border-radius:6px;cursor:pointer;font:inherit}
+nav button:hover{background:#141b26}nav button.on{background:#1b2638;color:var(--tx);box-shadow:inset 3px 0 var(--b)}
+.right{display:flex;flex-direction:column;min-width:0;height:100%}
+.mock{background:#2a2110;color:var(--a);padding:6px 16px;font-size:12px;border-bottom:1px solid #4a3a16}
+main{flex:1;overflow:auto;padding:18px 24px}
+h2{margin:0 0 14px;font-size:22px}h4{margin:0 0 10px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--b);padding:12px;border-radius:6px}
+.card small{color:var(--mut)}.card h3{margin:6px 0 0;font-size:18px}
+.card.g{border-left-color:var(--g)}.card.a{border-left-color:var(--a)}.card.r{border-left-color:var(--r)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+@media(max-width:800px){.app{grid-template-columns:1fr}nav{display:flex;overflow:auto}nav h1{display:none}nav button{white-space:nowrap}.grid2{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px;margin-bottom:14px}
+.mono,.log,code{font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace;font-size:12px}
+.hash{word-break:break-all;color:var(--mut)}
+button{background:#1f2c42;color:var(--tx);border:1px solid #33466a;border-radius:5px;padding:7px 12px;cursor:pointer;font:inherit;margin:2px 4px 2px 0}
+button:hover:not(:disabled){background:#294062}button:disabled{opacity:.45;cursor:default}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--b)}
+button.go{background:#1e4b8f;border-color:var(--b)}
+input,select{background:#0d1117;color:var(--tx);border:1px solid var(--line);border-radius:5px;padding:7px;font:inherit;margin:2px 6px 8px 0}
+label{display:block;color:var(--mut);font-size:12px}
+table{width:100%;border-collapse:collapse;background:var(--panel);margin-bottom:14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}th{color:var(--mut);font-weight:500}
+.badge{padding:2px 8px;border-radius:10px;font-size:12px;border:1px solid}
+.badge.g,.res.g{color:var(--g)}.badge.r,.res.r{color:var(--r)}.badge.a{color:var(--a)}.badge.b{color:var(--b)}
+.res{padding:9px 12px;border-radius:6px;border:1px solid currentColor;margin:8px 0 14px;background:#0d1117;word-break:break-word}
+.pipe{display:flex;flex-direction:column;gap:6px}
+.stage{padding:8px 12px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--mut);transition:.15s}
+.stage.run{border-color:var(--b);color:var(--b);background:#12233d}
+.stage.ok{border-color:#27674f;color:var(--g)}.stage.bad{border-color:var(--r);color:var(--r);background:#2a1414}
+.stage b{display:inline-block;width:16px}
+.chain{display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.chain div{padding:8px 12px;border-radius:6px;border:1px solid var(--line)}
+.chain .g{border-color:#27674f;color:var(--g)}.chain .r{border-color:var(--r);color:var(--r)}.chain .a{border-color:#6b5320;color:var(--a)}
+.cmd{display:block;width:100%;text-align:left}.cmd.sel{border-color:var(--b)}
+.logwrap{border-top:1px solid var(--line);background:#0a0f16}
+.logwrap>button{width:100%;text-align:left;border:0;border-radius:0;background:none;color:var(--mut);margin:0}
+.log{max-height:130px;overflow:auto;padding:4px 16px 10px}.log .ok{color:var(--g)}.log .err{color:var(--r)}.log .info{color:var(--mut)}
+.step{padding:10px 0;border-bottom:1px solid var(--line)}
+.arch button{display:block;width:100%;text-align:left}.arch button.sel{border-color:var(--b);background:#1b2e4d}
+.arch i{display:block;text-align:center;color:var(--mut);font-style:normal;line-height:1}
